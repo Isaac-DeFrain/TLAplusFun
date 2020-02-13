@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.lamport.tla.toolbox.tool.tlc.modelCheck">
+    <stringAttribute key="configurationName" value="Model_2_SnapShot_1574175372604"/>
+    <intAttribute key="distributedFPSetCount" value="0"/>
+    <stringAttribute key="distributedNetworkInterface" value="10.17.10.6"/>
+    <intAttribute key="distributedNodesCount" value="1"/>
+    <stringAttribute key="distributedTLC" value="off"/>
+    <intAttribute key="fpIndex" value="116"/>
+    <intAttribute key="maxHeapSize" value="25"/>
+    <stringAttribute key="modelBehaviorInit" value=""/>
+    <stringAttribute key="modelBehaviorNext" value=""/>
+    <stringAttribute key="modelBehaviorSpec" value="Spec"/>
+    <intAttribute key="modelBehaviorSpecType" value="0"/>
+    <stringAttribute key="modelBehaviorVars" value="nInMsg, nodes, nStatus, nOutStreamMsg, nOutMsg"/>
+    <stringAttribute key="modelComments" value=""/>
+    <booleanAttribute key="modelCorrectnessCheckDeadlock" value="false"/>
+    <listAttribute key="modelCorrectnessInvariants">
+        <listEntry value="1TypeOK"/>
+    </listAttribute>
+    <listAttribute key="modelCorrectnessProperties">
+        <listEntry value="1EventuallyAllNodesAreRunning"/>
+    </listAttribute>
+    <intAttribute key="modelEditorOpenTabs" value="2"/>
+    <stringAttribute key="modelExpressionEval" value="Doubled"/>
+    <stringAttribute key="modelParameterActionConstraint" value=""/>
+    <listAttribute key="modelParameterConstants">
+        <listEntry value="Nodes;;{[id |-&gt; 1, bootstrap |-&gt; 2, status |-&gt; &quot;genesis_validator&quot;], [id |-&gt; 2, bootstrap |-&gt; 3, status |-&gt; &quot;genesis_validator&quot;], [id |-&gt; 3, bootstrap |-&gt; 1, status |-&gt; &quot;genesis_validator&quot;]};0;0"/>
+        <listEntry value="None;;None;1;0"/>
+    </listAttribute>
+    <stringAttribute key="modelParameterContraint" value="\A n \in nodes : Len(nOutStreamMsg[n]) &lt; 5"/>
+    <listAttribute key="modelParameterDefinitions"/>
+    <stringAttribute key="modelParameterModelValues" value="{}"/>
+    <stringAttribute key="modelParameterNewDefinitions" value=""/>
+    <intAttribute key="numberOfWorkers" value="6"/>
+    <stringAttribute key="result.mail.address" value=""/>
+    <stringAttribute key="specName" value="GenesisCeremony"/>
+    <stringAttribute key="tlcResourcesProfile" value="local custom"/>
+</launchConfiguration>

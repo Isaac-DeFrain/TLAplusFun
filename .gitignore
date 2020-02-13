@@ -1,0 +1,17 @@
+# Eclipse Project Files
+#######################
+.settings
+.classpath
+.project
+.springBeans
+
+# Maven Output #
+#################
+target
+
+*.log
+.virtualenv
+.metals
+.history
+.vscode
+.idea

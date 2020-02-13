@@ -1,0 +1,326 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.14 of 10 July 2019
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 17 and seed -9213045574342643280 with 6 workers on 12 cores with 2373MB heap and 5337MB offheap memory [pid: 3518] (Linux 4.19.0-6-amd64 amd64, AdoptOpenJDK 11.0.3 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /home/isaac/Documents/RChain/TLA+/projects/Casper/CBCFramework/CBCCasperSpec.toolbox/Model_1/MC.tla
+Parsing file /home/isaac/Documents/RChain/TLA+/projects/Casper/CBCFramework/CBCCasperSpec.toolbox/Model_1/CBCCasperSpec.tla
+Parsing file /home/isaac/Documents/RChain/TLA+/toolbox/plugins/org.lamport.tlatools_1.0.0.201907102009/tla2sany/StandardModules/TLC.tla
+Parsing file /home/isaac/Documents/RChain/TLA+/toolbox/plugins/org.lamport.tlatools_1.0.0.201907102009/tla2sany/StandardModules/FiniteSets.tla
+Parsing file /home/isaac/Documents/RChain/TLA+/toolbox/plugins/org.lamport.tlatools_1.0.0.201907102009/tla2sany/StandardModules/Integers.tla
+Parsing file /home/isaac/Documents/RChain/TLA+/toolbox/plugins/org.lamport.tlatools_1.0.0.201907102009/tla2sany/StandardModules/Sequences.tla
+Parsing file /home/isaac/Documents/RChain/TLA+/toolbox/plugins/org.lamport.tlatools_1.0.0.201907102009/tla2sany/StandardModules/Naturals.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module Integers
+Semantic processing of module TLC
+Semantic processing of module CBCCasperSpec
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2019-12-18 17:40:44)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2212:0 @!@!@
+Implied-temporal checking--satisfiability problem has 1 branches.
+@!@!@ENDMSG 2212 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2102:1 @!@!@
+Attempted to select field "estimate" from a non-record value genesis
+line 37, col 18 to line 37, col 29 of module CBCCasperSpec
+While working on the initial state:
+/\ sent_msgs = <<<<>>, <<>>, <<>>, <<>>, <<>>>>
+/\ scored_q = << <<[msg |-> genesis, score |-> 20]>>,
+   <<[msg |-> genesis, score |-> 20]>>,
+   <<[msg |-> genesis, score |-> 20]>>,
+   <<[msg |-> genesis, score |-> 20]>>,
+   <<[msg |-> genesis, score |-> 20]>> >>
+/\ estimates = << {a, b, c, d, e, f},
+   {a, b, c, d, e, f},
+   {a, b, c, d, e, f},
+   {a, b, c, d, e, f},
+   {a, b, c, d, e, f} >>
+/\ dags = <<<<genesis>>, <<genesis>>, <<genesis>>, <<genesis>>, <<genesis>>>>
+/\ faulty = <<{}, {}, {}, {}, {}>>
+/\ states = <<{genesis}, {genesis}, {genesis}, {genesis}, {genesis}>>
+/\ unscored_q = <<<<>>, <<>>, <<>>, <<>>, <<>>>>
+/\ equiv_pairs = <<{}, {}, {}, {}, {}>>
+
+@!@!@ENDMSG 2102 @!@!@
+@!@!@STARTMSG 2103:1 @!@!@
+The error occurred when TLC was evaluating the nested
+expressions at the following positions:
+0. Line 519, column 3 to line 528, column 38 in CBCCasperSpec
+1. Line 519, column 6 to line 519, column 19 in CBCCasperSpec
+2. Line 520, column 6 to line 520, column 18 in CBCCasperSpec
+3. Line 521, column 6 to line 521, column 40 in CBCCasperSpec
+4. Line 522, column 6 to line 522, column 31 in CBCCasperSpec
+5. Line 523, column 6 to line 523, column 63 in CBCCasperSpec
+6. Line 524, column 6 to line 524, column 33 in CBCCasperSpec
+7. Line 525, column 6 to line 525, column 33 in CBCCasperSpec
+8. Line 526, column 6 to line 526, column 31 in CBCCasperSpec
+9. Line 527, column 6 to line 527, column 35 in CBCCasperSpec
+10. Line 528, column 6 to line 528, column 38 in CBCCasperSpec
+11. Line 512, column 3 to line 513, column 19 in CBCCasperSpec
+12. Line 513, column 6 to line 513, column 19 in CBCCasperSpec
+13. Line 508, column 19 to line 508, column 60 in CBCCasperSpec
+14. Line 508, column 30 to line 508, column 60 in CBCCasperSpec
+15. Line 508, column 47 to line 508, column 59 in CBCCasperSpec
+16. Line 320, column 3 to line 322, column 37 in CBCCasperSpec
+
+
+@!@!@ENDMSG 2103 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2019-12-18 17:40:45
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 518, col 1 to line 518, col 4 of module CBCCasperSpec>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 519, col 3 to line 528, col 38 of module CBCCasperSpec: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Send_Honest line 563, col 1 to line 563, col 11 of module CBCCasperSpec>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 557, col 6 to line 557, col 53 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 558, col 6 to line 558, col 68 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 559, col 6 to line 559, col 89 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 560, col 6 to line 560, col 65 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 568, col 13 to line 568, col 59 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Send_Drop line 571, col 1 to line 571, col 9 of module CBCCasperSpec>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 575, col 13 to line 575, col 90 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 576, col 13 to line 576, col 111 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 577, col 13 to line 577, col 87 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 578, col 13 to line 578, col 70 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Send_Equiv_Est line 582, col 1 to line 582, col 14 of module CBCCasperSpec>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 557, col 6 to line 557, col 53 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 558, col 6 to line 558, col 68 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 559, col 6 to line 559, col 89 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 560, col 6 to line 560, col 65 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 557, col 6 to line 557, col 53 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 558, col 6 to line 558, col 68 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 559, col 6 to line 559, col 89 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 560, col 6 to line 560, col 65 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 591, col 12 to line 591, col 48 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Send_Equiv_Just line 594, col 1 to line 594, col 15 of module CBCCasperSpec>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 557, col 6 to line 557, col 53 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 558, col 6 to line 558, col 68 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 559, col 6 to line 559, col 89 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 560, col 6 to line 560, col 65 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 557, col 6 to line 557, col 53 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 558, col 6 to line 558, col 68 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 559, col 6 to line 559, col 89 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 560, col 6 to line 560, col 65 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 604, col 12 to line 604, col 48 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Send_Equiv_Both line 607, col 1 to line 607, col 15 of module CBCCasperSpec>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 557, col 6 to line 557, col 53 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 558, col 6 to line 558, col 68 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 559, col 6 to line 559, col 89 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 560, col 6 to line 560, col 65 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 557, col 6 to line 557, col 53 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 558, col 6 to line 558, col 68 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 559, col 6 to line 559, col 89 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 560, col 6 to line 560, col 65 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 618, col 12 to line 618, col 48 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<HandleEquiv line 634, col 1 to line 634, col 11 of module CBCCasperSpec>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 640, col 13 to line 640, col 78 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 641, col 13 to line 641, col 83 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 642, col 13 to line 642, col 78 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 643, col 13 to line 643, col 70 of module CBCCasperSpec: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<TypeOK line 511, col 1 to line 511, col 6 of module CBCCasperSpec>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 512, col 3 to line 513, col 19 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 512, col 6 to line 512, col 18 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 507, col 19 to line 507, col 58 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 507, col 19 to line 507, col 25 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 330, col 13 to line 330, col 53 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 330, col 19 to line 330, col 52 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 330, col 20 to line 330, col 38 of module CBCCasperSpec: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 330, col 47 to line 330, col 51 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 507, col 30 to line 507, col 58 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 507, col 37 to line 507, col 43 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 330, col 13 to line 330, col 53 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  ||||||line 330, col 19 to line 330, col 52 of module CBCCasperSpec: 1:1
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||||line 330, col 20 to line 330, col 38 of module CBCCasperSpec: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||||line 330, col 47 to line 330, col 51 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 513, col 6 to line 513, col 19 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 508, col 19 to line 508, col 60 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 508, col 19 to line 508, col 26 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 331, col 13 to line 331, col 43 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 331, col 19 to line 331, col 42 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 331, col 20 to line 331, col 28 of module CBCCasperSpec: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 331, col 37 to line 331, col 41 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 508, col 30 to line 508, col 60 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 508, col 47 to line 508, col 59 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 508, col 37 to line 508, col 44 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 331, col 13 to line 331, col 43 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  ||||||line 331, col 19 to line 331, col 42 of module CBCCasperSpec: 1:1
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||||line 331, col 20 to line 331, col 28 of module CBCCasperSpec: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||||line 331, col 37 to line 331, col 41 of module CBCCasperSpec: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(1) at 2019-12-18 17:40:45: 1 states generated (55 s/min), 1 distinct states found (55 ds/min), 1 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+1 states generated, 1 distinct states found, 1 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 1075ms at (2019-12-18 17:40:45)
+@!@!@ENDMSG 2186 @!@!@

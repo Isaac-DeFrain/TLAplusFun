@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.lamport.tla.toolbox.tool.tlc.modelCheck">
+    <stringAttribute key="configurationName" value="Execution_SnapShot_1576708445247"/>
+    <intAttribute key="distributedFPSetCount" value="0"/>
+    <stringAttribute key="distributedNetworkInterface" value="10.10.10.6"/>
+    <intAttribute key="distributedNodesCount" value="1"/>
+    <stringAttribute key="distributedTLC" value="off"/>
+    <intAttribute key="fpIndex" value="90"/>
+    <intAttribute key="maxHeapSize" value="25"/>
+    <stringAttribute key="modelBehaviorInit" value=""/>
+    <stringAttribute key="modelBehaviorNext" value=""/>
+    <stringAttribute key="modelBehaviorSpec" value="Spec"/>
+    <intAttribute key="modelBehaviorSpecType" value="1"/>
+    <stringAttribute key="modelBehaviorVars" value="sent_msgs, scored_q, estimates, dags, faulty, states, unscored_q, equiv_pairs"/>
+    <stringAttribute key="modelComments" value="Safety and liveness specs with TypeOK invariant and CheckSafetyOracle property. Five nodes and restriction on number of sent messages for all nodes."/>
+    <booleanAttribute key="modelCorrectnessCheckDeadlock" value="true"/>
+    <listAttribute key="modelCorrectnessInvariants">
+        <listEntry value="1TypeOK"/>
+    </listAttribute>
+    <listAttribute key="modelCorrectnessProperties">
+        <listEntry value="1CheckSafetyOracle"/>
+    </listAttribute>
+    <intAttribute key="modelEditorOpenTabs" value="2"/>
+    <stringAttribute key="modelExpressionEval" value=""/>
+    <stringAttribute key="modelParameterActionConstraint" value=""/>
+    <listAttribute key="modelParameterConstants">
+        <listEntry value="nodes;;{1,2,3,4,5};0;0"/>
+        <listEntry value="weights;;{2,3,4,5,6};0;0"/>
+        <listEntry value="values;;{a, b, c, d, e, f};1;0"/>
+        <listEntry value="genesis;;genesis;1;0"/>
+        <listEntry value="threshold;;4;0;0"/>
+    </listAttribute>
+    <stringAttribute key="modelParameterContraint" value="\A n \in nodes : Len(sent_msgs[n]) &lt; 10"/>
+    <listAttribute key="modelParameterDefinitions"/>
+    <stringAttribute key="modelParameterModelValues" value="{}"/>
+    <stringAttribute key="modelParameterNewDefinitions" value=""/>
+    <intAttribute key="numberOfWorkers" value="6"/>
+    <stringAttribute key="result.mail.address" value=""/>
+    <stringAttribute key="specName" value="CBCCasperSpec"/>
+    <stringAttribute key="tlcResourcesProfile" value="local custom"/>
+</launchConfiguration>

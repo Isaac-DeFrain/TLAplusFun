@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.lamport.tla.toolbox.tool.tlc.modelCheck">
+    <stringAttribute key="configurationName" value="Model_1_SnapShot_1573757002021"/>
+    <intAttribute key="fpIndex" value="45"/>
+    <stringAttribute key="modelBehaviorInit" value="Init"/>
+    <stringAttribute key="modelBehaviorNext" value="Next"/>
+    <intAttribute key="modelBehaviorSpecType" value="2"/>
+    <stringAttribute key="specName" value="SimpleProgram"/>
+</launchConfiguration>

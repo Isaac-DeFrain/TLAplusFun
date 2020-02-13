@@ -1,0 +1,38 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.14 of 10 July 2019
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 90 and seed 2105220065734946156 with 6 workers on 12 cores with 7118MB heap and 64MB offheap memory [pid: 9454] (Linux 4.19.0-6-amd64 amd64, AdoptOpenJDK 11.0.3 x86_64, NoopFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /home/isaac/Documents/RChain/TLA+/projects/Casper/CBCFramework/CBCCasperSpec.toolbox/ExpressionEvaluation/MC.tla
+Parsing file /home/isaac/Documents/RChain/TLA+/projects/Casper/CBCFramework/CBCCasperSpec.toolbox/ExpressionEvaluation/CBCCasperSpec.tla
+Parsing file /home/isaac/Documents/RChain/TLA+/toolbox/plugins/org.lamport.tlatools_1.0.0.201907102009/tla2sany/StandardModules/TLC.tla
+Parsing file /home/isaac/Documents/RChain/TLA+/toolbox/plugins/org.lamport.tlatools_1.0.0.201907102009/tla2sany/StandardModules/FiniteSets.tla
+Parsing file /home/isaac/Documents/RChain/TLA+/toolbox/plugins/org.lamport.tlatools_1.0.0.201907102009/tla2sany/StandardModules/Integers.tla
+Parsing file /home/isaac/Documents/RChain/TLA+/toolbox/plugins/org.lamport.tlatools_1.0.0.201907102009/tla2sany/StandardModules/Sequences.tla
+Parsing file /home/isaac/Documents/RChain/TLA+/toolbox/plugins/org.lamport.tlatools_1.0.0.201907102009/tla2sany/StandardModules/Naturals.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module Integers
+Semantic processing of module TLC
+Semantic processing of module CBCCasperSpec
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2019-12-19 20:14:48)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2105:1 @!@!@
+Evaluating assumption line 30, col 8 to line 30, col 66 of module MC failed.
+TLC encountered a non-enumerable quantifier bound
+[estimate |-> "a", sender |-> 1, justification |-> {[estimate |-> gen_block, sender |-> gen_sender, justification |-> {}], [estimate |-> "a", sender |-> 2, justification |-> {[estimate |-> gen_block, sender |-> gen_sender, justification |-> {}]}], [estimate |-> "b", sender |-> 2, justification |-> {[estimate |-> gen_block, sender |-> gen_sender, justification |-> {}]}]}].
+line 156, col 46 to line 156, col 49 of module CBCCasperSpec
+@!@!@ENDMSG 2105 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 417ms at (2019-12-19 20:14:48)
+@!@!@ENDMSG 2186 @!@!@
