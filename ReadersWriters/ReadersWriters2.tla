@@ -105,7 +105,9 @@ Fairness ==
 Spec == Init /\ [][Next]_vars /\ Fairness
 
 Liveness ==
-    /\ []<>(readers /= {})
-    /\ []<>(writers /= {})
+    /\ \A actor \in Actors : []<>(actor \in readers)
+    /\ \A actor \in Actors : []<>(actor \in writers)
+    /\ \A actor \in Actors : actor \in readers ~> <>(actor \notin readers)
+    /\ \A actor \in Actors : actor \in writers ~> <>(actor \notin writers)
 
 ============================================================================
