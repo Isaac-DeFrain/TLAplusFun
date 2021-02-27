@@ -1,0 +1,279 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 67 and seed -8282779304737175464 with 1 worker on 12 cores with 7118MB heap and 64MB offheap memory [pid: 20913] (Linux 4.19.0-13-amd64 amd64, Debian 11.0.9.1 x86_64, MSBDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /home/isaac/Documents/TLA+/Practice/Questions/ReadersWriters/MC.tla
+Parsing file /home/isaac/Documents/TLA+/Practice/Questions/ReadersWriters/ReadersWriters2.tla
+Parsing file /tmp/TLC.tla
+Parsing file /tmp/FiniteSets.tla
+Parsing file /tmp/Naturals.tla
+Parsing file /tmp/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module ReadersWriters2
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2021-02-26 11:54:13)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2212:0 @!@!@
+Implied-temporal checking--satisfiability problem has 7 branches.
+@!@!@ENDMSG 2212 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2021-02-26 11:54:13.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2192:0 @!@!@
+Checking 7 branches of temporal properties for the current state space with 75684 total distinct states at (2021-02-26 11:54:16)
+@!@!@ENDMSG 2192 @!@!@
+@!@!@STARTMSG 2267:0 @!@!@
+Finished checking temporal properties in 08s at 2021-02-26 11:54:25
+@!@!@ENDMSG 2267 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(9) at 2021-02-26 11:54:25: 19,747 states generated (19,747 s/min), 11,561 distinct states found (11,561 ds/min), 5,244 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(13) at 2021-02-26 11:54:31: 59,674 states generated, 21,527 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2192:0 @!@!@
+Checking 7 branches of temporal properties for the complete state space with 150689 total distinct states at (2021-02-26 11:54:31)
+@!@!@ENDMSG 2192 @!@!@
+@!@!@STARTMSG 2267:0 @!@!@
+Finished checking temporal properties in 01min 04s at 2021-02-26 11:55:36
+@!@!@ENDMSG 2267 @!@!@
+@!@!@STARTMSG 2193:0 @!@!@
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 4.5E-11
+@!@!@ENDMSG 2193 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2021-02-26 11:55:36
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 88, col 1 to line 88, col 4 of module ReadersWriters2>: 1:1
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 89, col 5 to line 91, col 21 of module ReadersWriters2: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<TryRead line 32, col 1 to line 32, col 14 of module ReadersWriters2>: 9263:10776
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 33, col 8 to line 33, col 33 of module ReadersWriters2: 75375
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 33, col 8 to line 33, col 12 of module ReadersWriters2: 64599
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 33, col 21 to line 33, col 33 of module ReadersWriters2: 64599
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 24, col 19 to line 24, col 65 of module ReadersWriters2: 64599
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 24, col 21 to line 24, col 24 of module ReadersWriters2: 161469
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 24, col 34 to line 24, col 63 of module ReadersWriters2: 64599
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  ||||line 19, col 13 to line 19, col 37 of module ReadersWriters2: 64599:226068
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 19, col 15 to line 19, col 18 of module ReadersWriters2: 161469
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 19, col 28 to line 19, col 35 of module ReadersWriters2: 64599
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 24, col 40 to line 24, col 62 of module ReadersWriters2: 64599
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 34, col 8 to line 34, col 50 of module ReadersWriters2: 10776
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 35, col 8 to line 35, col 37 of module ReadersWriters2: 10776
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<TryWrite line 37, col 1 to line 37, col 15 of module ReadersWriters2>: 9003:10776
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 38, col 8 to line 38, col 34 of module ReadersWriters2: 75375
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 38, col 8 to line 38, col 12 of module ReadersWriters2: 64599
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 38, col 21 to line 38, col 34 of module ReadersWriters2: 64599
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 26, col 19 to line 26, col 66 of module ReadersWriters2: 64599
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 26, col 21 to line 26, col 24 of module ReadersWriters2: 161469
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 26, col 34 to line 26, col 64 of module ReadersWriters2: 64599
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  ||||line 19, col 13 to line 19, col 37 of module ReadersWriters2: 64599:226068
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 19, col 15 to line 19, col 18 of module ReadersWriters2: 161469
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 19, col 28 to line 19, col 35 of module ReadersWriters2: 64599
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 26, col 40 to line 26, col 63 of module ReadersWriters2: 64599
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 39, col 8 to line 39, col 51 of module ReadersWriters2: 10776
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 40, col 8 to line 40, col 37 of module ReadersWriters2: 10776
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ReadOrWrite line 60, col 1 to line 60, col 11 of module ReadersWriters2>: 3260:8802
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 61, col 8 to line 61, col 22 of module ReadersWriters2: 30335
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 61, col 8 to line 61, col 14 of module ReadersWriters2: 21533
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 61, col 19 to line 61, col 22 of module ReadersWriters2: 21533
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 62, col 8 to line 62, col 19 of module ReadersWriters2: 30318
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 62, col 8 to line 62, col 14 of module ReadersWriters2: 21516
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 62, col 18 to line 62, col 19 of module ReadersWriters2: 21516
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 66, col 14 to line 66, col 17 of module ReadersWriters2: 15648
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 43, col 8 to line 43, col 40 of module ReadersWriters2: 7824
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 44, col 8 to line 44, col 31 of module ReadersWriters2: 7824
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 45, col 8 to line 45, col 24 of module ReadersWriters2: 7824
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 67, col 21 to line 67, col 25 of module ReadersWriters2: 7824
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 48, col 8 to line 48, col 19 of module ReadersWriters2: 8802
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 48, col 8 to line 48, col 14 of module ReadersWriters2: 7824
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 48, col 18 to line 48, col 19 of module ReadersWriters2: 7824
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 49, col 8 to line 49, col 40 of module ReadersWriters2: 978
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 50, col 8 to line 50, col 31 of module ReadersWriters2: 978
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 8 to line 51, col 24 of module ReadersWriters2: 978
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 68, col 22 to line 68, col 26 of module ReadersWriters2: 978
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Stop line 70, col 1 to line 70, col 4 of module ReadersWriters2>: 0:29361
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 54, col 8 to line 54, col 24 of module ReadersWriters2: 29361
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 55, col 13 to line 55, col 40 of module ReadersWriters2: 23487
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 13 to line 56, col 42 of module ReadersWriters2: 23487
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 57, col 13 to line 57, col 40 of module ReadersWriters2: 5874
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 58, col 13 to line 58, col 42 of module ReadersWriters2: 5874
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 70, col 58 to line 70, col 62 of module ReadersWriters2: 29361
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 70, col 22 to line 70, col 41 of module ReadersWriters2: 21533
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<TypeOK line 76, col 1 to line 76, col 6 of module ReadersWriters2>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 77, col 5 to line 79, col 45 of module ReadersWriters2: 21527
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<Safety line 81, col 1 to line 81, col 6 of module ReadersWriters2>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 82, col 5 to line 84, col 32 of module ReadersWriters2: 21527
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 82, col 8 to line 82, col 36 of module ReadersWriters2: 21527
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 82, col 8 to line 82, col 20 of module ReadersWriters2: 21527
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 82, col 25 to line 82, col 36 of module ReadersWriters2: 13699
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 83, col 8 to line 83, col 36 of module ReadersWriters2: 21527
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 83, col 8 to line 83, col 20 of module ReadersWriters2: 21527
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 83, col 25 to line 83, col 36 of module ReadersWriters2: 5871
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 84, col 8 to line 84, col 32 of module ReadersWriters2: 21527
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(13) at 2021-02-26 11:55:36: 59,674 states generated (43,243 s/min), 21,527 distinct states found (15,599 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+59674 states generated, 21527 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 13.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 6 and the 95th percentile is 3).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 82800ms at (2021-02-26 11:55:36)
+@!@!@ENDMSG 2186 @!@!@
