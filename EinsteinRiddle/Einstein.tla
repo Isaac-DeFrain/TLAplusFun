@@ -36,7 +36,7 @@ CONSTANTS
     NATIONALITIES,  \* { "brit", "swede", "dane", "norwegian", "german" }
     COLORS,         \* { "red", "white", "blue", "green", "yellow" }
     PETS,           \* { "bird", "cat", "dog", "fish", "horse" }
-    CIGARS,         \* { "blend", "bm", "dunhill", "pm", "prince" }
+    CIGARS,         \* { "blend", "bm", "dh", "pm", "prince" }
     DRINKS          \* { "beer", "coffee", "mylk", "tea", "water" }
 
 VARIABLES
