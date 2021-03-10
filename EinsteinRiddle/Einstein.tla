@@ -12,7 +12,7 @@
 (* - No owners have the same pet, smoke the same brand of cigar, or  *)
 (*   drink the same beverage.                                        *)
 (*                                                                   *)
-(* Rules:                                                            *)
+(* Hints:                                                            *)
 (*  1 the Brit lives in the red house                                *)
 (*  2 the Swede keeps dogs as pets                                   *)
 (*  3 the Dane drinks tea                                            *)
