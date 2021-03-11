@@ -12,7 +12,7 @@
 (* - No owners have the same pet, smoke the same brand of cigar, or  *)
 (*   drink the same beverage.                                        *)
 (*                                                                   *)
-(* Hints:                                                            *)
+(* Rules:                                                            *)
 (*  1 the Brit lives in the red house                                *)
 (*  2 the Swede keeps dogs as pets                                   *)
 (*  3 the Dane drinks tea                                            *)
@@ -52,15 +52,15 @@ VARIABLES
 (* Rules *)
 (*********)
 
-BritLivesInTheRedHouse == \E i \in 1..5 : nationality[i] = "brit" /\ colors[i] = "red"
+BritLivesInTheRedHouse == \E i \in 2..5 : nationality[i] = "brit" /\ colors[i] = "red"
 
-SwedeKeepsDogs == \E i \in 1..5 : nationality[i] = "swede" /\ pets[i] = "dog"
+SwedeKeepsDogs == \E i \in 2..5 : nationality[i] = "swede" /\ pets[i] = "dog"
 
-DaneDrinksTea == \E i \in 1..5 : nationality[i] = "dane" /\ drinks[i] = "tea"
+DaneDrinksTea == \E i \in 2..5 : nationality[i] = "dane" /\ drinks[i] = "tea"
 
-GreenLeftOfWhite == \E i \in 1..4 : colors[i] = "green" /\ colors[i] = "white"
+GreenLeftOfWhite == \E i \in 1..4 : colors[i] = "green" /\ colors[i + 1] = "white"
 
-GreenOwnerDrinksCoffee == \E i \in 1..5 : colors[i] = "green" /\ drinks[i] = "coffee"
+GreenOwnerDrinksCoffee == \E i \in 1..5 \ {3} : colors[i] = "green" /\ drinks[i] = "coffee"
 
 SmokesPallmallRearsBirds == \E i \in 1..5 : cigars[i] = "pm" /\ pets[i] = "bird"
 
@@ -82,12 +82,9 @@ HorseKeeperLivesNextToDunhillSmoker ==
 
 BluemasterSmokerDrinksBeer == \E i \in 1..5 : cigars[i] = "bm" /\ drinks[i] = "beer"
 
-GermanSmokesPrince == \E i \in 1..5 : nationality[i] = "german" /\ cigars[i] = "prince"
+GermanSmokesPrince == \E i \in 2..5 : nationality[i] = "german" /\ cigars[i] = "prince"
 
-NorwegianLivesNextToBlueHouse ==
-    \E i \in 1..4 :
-        \/ nationality[i] = "norwegian" /\ colors[i + 1] = "blue"
-        \/ colors[i] = "blue" /\ nationality[i + 1] = "norwegian"
+NorwegianLivesNextToBlueHouse == colors[2] = "blue" \* since the norwegian lives in the first house
 
 BlendSmokerHasWaterDrinkingNeighbor ==
     \E i \in 1..4 :
@@ -110,7 +107,7 @@ Permutation(S) ==
 Init ==
     /\ drinks \in { p \in Permutation(DRINKS) : p[3] = "mylk" }
     /\ nationality \in { p \in Permutation(NATIONALITIES) : p[1] = "norwegian" }
-    /\ colors \in Permutation(COLORS)
+    /\ colors \in { p \in Permutation(COLORS) : p[2] = "blue" }
     /\ pets \in Permutation(PETS)
     /\ cigars \in Permutation(CIGARS)
 
