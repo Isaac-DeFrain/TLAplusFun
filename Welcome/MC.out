@@ -1,0 +1,30 @@
+$ tlc MC.tla -deadlock -lncheck final
+TLC2 Version 2.14 of 10 July 2019 (rev: 0cae24f)
+Running breadth-first search Model-Checking with fp 101 and seed 5010787141343927681 with 1 worker on 12 cores with 7118MB heap and 64MB offheap memory [pid: 32160] (Linux 4.19.0-13-amd64 amd64, Debian 11.0.9.1 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /home/isaac/Documents/TLA+/TLAplusFun/Welcome/MC.tla
+Parsing file /home/isaac/Documents/TLA+/TLAplusFun/Welcome/Welcome.tla
+Parsing file /tmp/TLC.tla
+Parsing file /tmp/Naturals.tla
+Parsing file /tmp/Sequences.tla
+Parsing file /tmp/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module Welcome
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module MC
+Starting... (2021-03-13 16:09:42)
+Implied-temporal checking--satisfiability problem has 8 branches.
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2021-03-13 16:09:42.
+Progress(7) at 2021-03-13 16:09:42: 23 states generated, 17 distinct states found, 0 states left on queue.
+Checking 8 branches of temporal properties for the complete state space with 136 total distinct states at (2021-03-13 16:09:42)
+Finished checking temporal properties in 00s at 2021-03-13 16:09:42
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 5.5E-18
+23 states generated, 17 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 7.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 2 and the 95th percentile is 2).
+Finished in 00s at (2021-03-13 16:09:42)
