@@ -1,0 +1,30 @@
+$ tlc MC.tla -workers 4096 -lncheck final -deadlock
+TLC2 Version 2.15 of Day Month 20?? (rev: eb3ff99)
+Running breadth-first search Model-Checking with fp 17 and seed -6780053297771069215 with 4096 workers on 64 cores with 27305MB heap and 64MB offheap memory [pid: 23954] (Linux 5.3.0-26-generic amd64, Ubuntu 11.0.7 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /home/tla/models/handshaking/max/MC.tla
+Parsing file /home/tla/models/handshaking/max/Handshaking.tla
+Parsing file /tmp/TLC.tla
+Parsing file /tmp/FiniteSets.tla
+Parsing file /tmp/Naturals.tla
+Parsing file /tmp/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module Handshaking
+Semantic processing of module TLC
+Semantic processing of module MC
+Starting... (2021-03-13 01:43:59)
+Implied-temporal checking--satisfiability problem has 10 branches.
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2021-03-13 01:44:00.
+Progress(21) at 2021-03-13 01:44:05: 5,268 states generated, 1,641 distinct states found, 0 states left on queue.
+Checking 10 branches of temporal properties for the complete state space with 16410 total distinct states at (2021-03-13 01:44:05)
+Finished checking temporal properties in 00s at 2021-03-13 01:44:05
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 3.2E-13
+5268 states generated, 1641 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 21.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 6 and the 95th percentile is 3).
+Finished in 05s at (2021-03-13 01:44:05)
