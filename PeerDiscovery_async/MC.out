@@ -1,0 +1,32 @@
+$ tlc MC.tla -workers 4096 -lncheck final -deadlock
+TLC2 Version 2.15 of Day Month 20?? (rev: eb3ff99)
+Running breadth-first search Model-Checking with fp 39 and seed 2487184527571242501 with 4096 workers on 64 cores with 27305MB heap and 64MB offheap memory [pid: 12369] (Linux 5.3.0-64-generic amd64, Ubuntu 11.0.7 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /home/tla/models/peer_discovery_async/MC.tla
+Parsing file /home/tla/models/peer_discovery_async/PeerDiscovery.tla
+Parsing file /tmp/TLC.tla
+Parsing file /tmp/FiniteSets.tla
+Parsing file /tmp/Naturals.tla
+Parsing file /tmp/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module PeerDiscovery
+Semantic processing of module TLC
+Semantic processing of module MC
+Starting... (2021-03-16 21:41:35)
+Implied-temporal checking--satisfiability problem has 2 branches.
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2021-03-16 21:41:35.
+Progress(7) at 2021-03-16 21:41:51: 279,231 states generated (279,231 s/min), 78,906 distinct states found (78,906 ds/min), 68,432 states left on queue.
+Progress(8) at 2021-03-16 21:41:56: 4,043,521 states generated, 248,832 distinct states found, 0 states left on queue.
+Checking 2 branches of temporal properties for the complete state space with 497664 total distinct states at (2021-03-16 21:41:56)
+Finished checking temporal properties in 02s at 2021-03-16 21:41:59
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 5.1E-8
+  based on the actual fingerprints:  val = 2.2E-9
+4043521 states generated, 248832 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 8.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 31 and the 95th percentile is 9).
+Finished in 24s at (2021-03-16 21:41:59)
