@@ -1,0 +1,32 @@
+$ tlc ExtraMC.tla -workers 4096 -lncheck final -deadlock
+TLC2 Version 2.15 of Day Month 20?? (rev: eb3ff99)
+Running breadth-first search Model-Checking with fp 53 and seed 8394291018244577643 with 4096 workers on 64 cores with 27305MB heap and 64MB offheap memory [pid: 25067] (Linux 5.3.0-64-generic amd64, Ubuntu 11.0.7 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /home/tla/models/peer_discovery_async/ExtraMC.tla
+Parsing file /home/tla/models/peer_discovery_async/AsyncPeerDiscovery_extra.tla
+Parsing file /tmp/TLC.tla
+Parsing file /tmp/FiniteSets.tla
+Parsing file /tmp/Naturals.tla
+Parsing file /tmp/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module AsyncPeerDiscovery_extra
+Semantic processing of module TLC
+Semantic processing of module ExtraMC
+Starting... (2021-03-22 23:22:41)
+Implied-temporal checking--satisfiability problem has 7 branches.
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2021-03-22 23:22:41.
+Progress(10) at 2021-03-22 23:22:47: 532,228 states generated (532,228 s/min), 104,674 distinct states found (104,674 ds/min), 73,705 states left on queue.
+Progress(12) at 2021-03-22 23:23:08: 5,712,201 states generated, 371,293 distinct states found, 0 states left on queue.
+Checking 7 branches of temporal properties for the complete state space with 2599051 total distinct states at (2021-03-22 23:23:08)
+Finished checking temporal properties in 05s at 2021-03-22 23:23:13
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 1.1E-7
+  based on the actual fingerprints:  val = 1.9E-8
+5712201 states generated, 371293 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 12.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 31 and the 95th percentile is 11).
+Finished in 33s at (2021-03-22 23:23:14)
