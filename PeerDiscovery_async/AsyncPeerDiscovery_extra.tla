@@ -1,4 +1,4 @@
----------- MODULE AsyncPeerDiscovery ----------
+---------- MODULE AsyncPeerDiscovery_extra ----------
 
 EXTENDS FiniteSets, Naturals
 
@@ -25,13 +25,21 @@ DNS_request == \E n \in NODES :
     /\ dns_requests' = dns_requests \cup {n}
     /\ UNCHANGED <<dns_request_enabled, peers>>
 
-\* DNS responds to a node's request
+\* DNS responds to a request
 DNS_response == \E n \in dns_requests :
     \E ns \in SUBSET (NODES \ {n}) :
         /\ Cardinality(ns) >= 2
         /\ dns_request_enabled' = [ dns_request_enabled EXCEPT ![n] = ~@ ]
         /\ dns_requests' = dns_requests \ {n}
         /\ peers' = [ peers EXCEPT ![n] = ns ]
+
+request_peer(m, n) ==
+    \* node [m] requests peers from node [n]
+    /\ peers' = [ peers EXCEPT ![m] = @ \cup (peers[n] \ {m}) ]
+    /\ UNCHANGED <<dns_request_enabled, dns_requests>>
+
+\* a node requests peers from a peer
+Request_peer == \E m \in NODES : \E n \in peers[m] : request_peer(m, n)
 
 (*****************)
 (* Specification *)
@@ -42,11 +50,15 @@ Init ==
     /\ dns_requests = {}
     /\ peers = [ n \in NODES |-> {} ]
 
-Next == DNS_request \/ DNS_response
+Next ==
+    \/ DNS_request
+    \/ DNS_response
+    \/ Request_peer
 
 Fairness ==
     /\ WF_vars(DNS_request)
     /\ WF_vars(DNS_response)
+    /\ WF_vars(Request_peer)
 
 Spec == Init /\ [][Next]_vars /\ Fairness
 
@@ -59,11 +71,15 @@ TypeOK ==
     /\ dns_requests \subseteq NODES
     /\ \A n \in NODES : peers[n] \subseteq NODES
 
-Safety == \A n \in NODES : n \notin peers[n]
+Safety ==
+    /\ \A n \in NODES : n \notin peers[n]
+    /\ ENABLED DNS_request <=> \E n \in NODES : dns_request_enabled[n] /\ n \notin dns_requests
 
 Liveness ==
-    /\ <>[](\A n \in NODES : dns_request_enabled[n] = FALSE)
-    /\ <>[](\A n \in NODES : Cardinality(peers[n]) >= 2)
+    /\ <>[](\A n \in NODES : ~dns_request_enabled[n] /\ Cardinality(peers[n]) >= 2)
     /\ \A n \in NODES : n \in dns_requests ~> n \notin dns_requests
+    /\ <>(\E m, n \in NODES : /\ m /= n
+                              /\ Cardinality(peers[m]) > 2
+                              /\ Cardinality(peers[n]) > 2)
 
-===============================================
+=====================================================
