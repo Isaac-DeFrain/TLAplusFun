@@ -1,0 +1,15 @@
+digraph PeerDiscovery {
+
+  rankdir="LR";
+
+  // states
+  start [style="invis"];
+  init [label="dns_request_enabled[n] = TRUE\npeers[n] = {}"];
+  next [label="dns_request_enabled[n] = FALSE\nCardinality(peers[n]) >= 2"];
+
+  // transitions
+  start -> init;
+  init -> next [label="Request_DNS"];
+  next -> next [label="Request_peer"];
+
+}

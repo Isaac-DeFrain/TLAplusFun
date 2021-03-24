@@ -1,0 +1,16 @@
+digraph AsyncPeerDiscovery {
+
+  rankdir="LR";
+
+  // states
+  start [style="invis"];
+  init [label="dns_request_enabled[n] = TRUE\nn \\notin dns_requests\npeers[n] = {}"];
+  next [label="dns_request_enabled[n] = TRUE\nn \\in dns_requests\npeers[n] = {}"];
+  end [label="dns_request_enabled[n] = FALSE\nn \\notin dns_requests\nCardinality(peers[n]) >= 2"];
+
+  // transitions
+  start -> init;
+  init -> next [label="DNS_request"];
+  next -> end [label="DNS_response"];
+
+}
