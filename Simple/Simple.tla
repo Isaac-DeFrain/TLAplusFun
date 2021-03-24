@@ -14,7 +14,7 @@ Next == Incr
 Spec == Init /\ [][Next]_x
 
 \* Fair specification
-Fairness == []<><<x' /= x>>_x
+Fairness == WF_x(Incr)
 
 FairSpec == Spec /\ Fairness
 
