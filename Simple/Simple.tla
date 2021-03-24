@@ -26,4 +26,19 @@ Liveness0 == <>(x > 0)
 
 LivenessN == \A n \in 0..10 : <>(x > n)
 
+\* Property satisfaction
+Equivalence1 == []<><<x' /= x>>_x
+
+Equivalence2 == []<><<Incr>>_x
+
+LEMMA Liveness0 => LivenessN
+
+THEOREM FairSpec <=> Spec /\ Equivalence1
+
+THEOREM FairSpec <=> Spec /\ Equivalence2
+
+THEOREM FairSpec => /\ LivenessN
+                    /\ Equivalence1
+                    /\ Equivalence2
+
 =======================
