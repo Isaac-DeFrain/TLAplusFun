@@ -1,0 +1,9 @@
+digraph Simple {
+
+  // state
+  x [label="x"];
+
+  // transition
+  x -> x [label="Incr"];
+
+}
