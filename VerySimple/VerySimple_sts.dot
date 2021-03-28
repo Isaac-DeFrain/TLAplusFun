@@ -1,0 +1,14 @@
+digraph VerySimple {
+
+  rankdir="LR";
+
+  // states
+  initial [label="Initial"];
+  running [label="Running"];
+  stopped [label="Stopped"];
+
+  // transitions
+  initial -> running;
+  running -> stopped;
+
+}
