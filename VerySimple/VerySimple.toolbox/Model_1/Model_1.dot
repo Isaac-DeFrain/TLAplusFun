@@ -1,0 +1,21 @@
+strict digraph DiskGraph {
+edge [colorscheme="paired12"]
+nodesep=0.35;
+subgraph cluster_graph {
+color="white";
+904952134237546403 [label="status = \"Initial\"",style = filled]
+904952134237546403 -> -8747671789495529520 [label="",color="2",fontcolor="2"];
+-8747671789495529520 [label="status = \"Running\""];
+-8747671789495529520 -> 716913849159640880 [label="",color="3",fontcolor="3"];
+716913849159640880 [label="status = \"Stopped\""];
+716913849159640880 -> 716913849159640880 [label="",color="4",fontcolor="4"];
+{rank = same; 904952134237546403;}
+{rank = same; -8747671789495529520;}
+{rank = same; 716913849159640880;}
+}
+subgraph cluster_legend {graph[style=bold];label = "Next State Actions" style="solid"
+node [ labeljust="l",colorscheme="paired12",style=filled,shape=record ]
+Done [label="Done",fillcolor=4]
+RunningToStopped [label="RunningToStopped",fillcolor=3]
+InitialToRunning [label="InitialToRunning",fillcolor=2]
+}}
