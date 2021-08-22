@@ -17,9 +17,15 @@ public class ExternalFunctionParser {
         // split string on seperator into array of input and output values
         String[] lnarr = line.split(", ");
         // first parsed value is an input
-        domain.add(IntValue.gen(Integer.parseInt(lnarr[0])));
-        // second parsed value is the corresponding output
-        values.add(IntValue.gen(Integer.parseInt(lnarr[1])));
+        IntValue x = IntValue.gen(Integer.parseInt(lnarr[0]));
+        // check if [domain] already contains this value
+        if (!domain.contains(x)) {
+          // if unique, add this value
+          domain.add(x);
+          // second parsed value is the corresponding output
+          values.add(IntValue.gen(Integer.parseInt(lnarr[1])));
+        }
+        // else, skip it
         line = br.readLine();
       }
     } finally {
