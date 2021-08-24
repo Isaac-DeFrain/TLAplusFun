@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 
 public class ExternalRecordParser {
-  // @TLAPlusOperator(identifier = "ExFunParser", module = "ExternalFunctionParser")
+  // @TLAPlusOperator(identifier = "ExRcdParser", module = "ExternalRecordParser")
   public static Value ExRcdParser(final StringValue absolutePath) throws IOException {
     // read the log file at [absolutePath]
     BufferedReader br = new BufferedReader(new FileReader(absolutePath.val.toString()));
