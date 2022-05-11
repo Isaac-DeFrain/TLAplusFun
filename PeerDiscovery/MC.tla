@@ -2,6 +2,6 @@
 
 EXTENDS PeerDiscovery, TLC
 
-Nodes == 1..5
+N_impl == 4
 
 ===================

@@ -2,70 +2,77 @@
 
 EXTENDS FiniteSets, Naturals
 
-CONSTANT NODES \* set of node IDs
+CONSTANT N
 
 VARIABLES
-    dns_request_enabled, \* tuple of each node's DNS flag
-    peers \* tuple of each node's peer set
+    dns,                    \* dns map of shared peers
+    dns_request_enabled,    \* tuple of each node's DNS flag
+    peers                   \* tuple of each node's peer set
 
-vars == <<dns_request_enabled, peers>>
+vars == <<dns, dns_request_enabled, peers>>
+Nodes == 1..N
 
-ASSUME NODES \subseteq Nat
-ASSUME Cardinality(NODES) > 3
+ASSUME N > 3
 
 (***********)
 (* Actions *)
 (***********)
 
-\* node [n] requests peers from DNS
-request_dns(n) == \E ns \in SUBSET (NODES \ {n}) :
+\* a node requests peers from the DNS
+Request_DNS(n, ns) ==
+    LET ps == UNION { dns[m] : m \in Nodes } IN
+    /\ dns_request_enabled[n]
     /\ Cardinality(ns) >= 2
-    /\ dns_request_enabled' = [ dns_request_enabled EXCEPT ![n] = ~@ ]
+    /\ \/ ps = Nodes
+       \/ ns \cap ps # {}
+       \/ \E m \in Nodes : dns[m] = {}
+    /\ dns' = [ dns EXCEPT ![n] = ns ]
+    /\ dns_request_enabled' = [ dns_request_enabled EXCEPT ![n] = FALSE ]
     /\ peers' = [ peers EXCEPT ![n] = ns ]
 
-\* a node with an empty peer set requests peers from the DNS
-Request_DNS == \E n \in NODES :
-    /\ dns_request_enabled[n]
-    /\ request_dns(n)
-
-request_peer(m, n) ==
-    \* node [m] requests peers from node [n]
-    /\ peers' = [ peers EXCEPT ![m] = @ \cup (peers[n] \ {m}) ]
-    /\ UNCHANGED dns_request_enabled
-
-\* a node requests peers from a peer
-Request_peer == \E m \in NODES : \E n \in peers[m] : request_peer(m, n)
+\* node [m] requests peers from a node [n]
+\* if [n] doesn't already know about [m], then [m] is added to [n]'s peers
+Request_peer(m, n) ==
+    /\ n \in peers[m]
+    /\ peers' = [ peers EXCEPT ![m] = @ \cup (peers[n] \ {m}),
+                               ![n] = @ \cup {m} ]
+    /\ UNCHANGED <<dns, dns_request_enabled>>
 
 (*****************)
 (* Specification *)
 (*****************)
 
 Init ==
-    /\ dns_request_enabled = [ n \in NODES |-> TRUE ]
-    /\ peers = [ n \in NODES |-> {} ]
+    /\ dns = [ n \in Nodes |-> {} ]
+    /\ dns_request_enabled = [ n \in Nodes |-> TRUE ]
+    /\ peers = [ n \in Nodes |-> {} ]
 
-Next == Request_DNS \/ Request_peer
+Next ==
+    \/ \E n \in Nodes : \E ns \in SUBSET (Nodes \ {n}) : Request_DNS(n, ns)
+    \/ \E m, n \in Nodes : Request_peer(m, n)
 
-Fairness ==
-    /\ WF_vars(Request_DNS)
-    /\ WF_vars(Request_peer)
+Spec == Init /\ [][Next]_vars
 
-Spec == Init /\ [][Next]_vars /\ Fairness
+Fairness == WF_vars(Next)
+
+FairSpec == Spec /\ Fairness
 
 (***************************)
 (* Invariants & Properties *)
 (***************************)
 
 TypeOK ==
-    /\ \A n \in NODES : dns_request_enabled[n] \in BOOLEAN
-    /\ \A n \in NODES : peers[n] \subseteq NODES
+    /\ \A n \in Nodes : dns_request_enabled[n] \in BOOLEAN
+    /\ \A n \in Nodes : peers[n] \subseteq Nodes
 
-Safety == \A n \in NODES : n \notin peers[n]
+Safety == \A n \in Nodes : n \notin peers[n]
 
 Liveness ==
-    /\ <>[](\A n \in NODES : ~dns_request_enabled[n] /\ Cardinality(peers[n]) >= 2)
-    /\ <>(\E m, n \in NODES : /\ m /= n
-                              /\ Cardinality(peers[m]) > 2
-                              /\ Cardinality(peers[n]) > 2)
+    /\ <>[](\A n \in Nodes : ~dns_request_enabled[n] /\ Cardinality(peers[n]) >= 2)
+    /\ <>(\E m, n \in Nodes :
+            /\ m /= n
+            /\ Cardinality(peers[m]) > 2
+            /\ Cardinality(peers[n]) > 2
+        )
 
 ==========================================
